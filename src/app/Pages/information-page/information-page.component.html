@@ -9,7 +9,7 @@
           <p class="titre">{{ dataToShow.title }}</p>
 
           <div class="ligne">
-            <p class="soustitre">Sortie&nbsp;:</p>
+            <p class="soustitre">Released&nbsp;:</p>
             <p class="texte">&nbsp;{{dataToShow.release_date}}</p>
           </div>
         </div>
@@ -20,34 +20,37 @@
           <p class="titre">{{ dataToShow.name }}</p>
 
           <div class="ligne">
-            <p class="soustitre">Sortie&nbsp;:</p>
+            <p class="soustitre">Released&nbsp;:</p>
             <p class="texte">&nbsp;{{ dataToShow.first_air_date}}</p>
           </div>
         </div>
       </ng-container>
 
       <div class="ligne">
-        <p class="soustitre">Popularité&nbsp;:</p>
+        <p class="soustitre">Popularity&nbsp;:</p>
         <p class="texte">&nbsp;{{ dataToShow.popularity }}</p>
       </div>
 
       <div class="ligne">
-        <p class="soustitre">Genre&nbsp;:</p>
+        <p class="soustitre">Type&nbsp;:</p>
         <p class="texte" *ngFor="let genre of dataToShow.genres">&nbsp;{{genre.name}},&nbsp;</p>
       </div>
     </div>
   </div>
 
   <br/>
-  <p class="soustitre">Résumé</p>
+  <p class="soustitre">Overview</p>
   <p class="resume">{{ dataToShow.overview }}</p>
 
   <br/>
-  <p class="soustitre">Avis Uitilisateurs</p>
-  <p class="texte" *ngFor="let review of reviewToShow.results">
-    <strong>{{review.author}}</strong> ({{review.created_at.substring(0,10)}}) : <br/>
-    {{review.content.substring(0,150)}}... <br/>
-    <u>{{review.url}}</u><br/><br/>
-  </p>
-  <br/><br/><button mat-raised-button color="basic" [routerLink]="['']">Retour</button>
+  <div *ngIf="reviewToShow.total_results !== 0">
+    <p class="soustitre">user opinions</p>
+    <p class="texte" *ngFor="let review of reviewToShow.results">
+      <strong>{{review.author}}</strong> ({{review.created_at.substring(0,10)}}) : <br/>
+      {{review.content.substring(0,150)}}... <br/>
+      <u>{{review.url}}</u><br/><br/>
+    </p>
+  </div>
+
+  <br/><br/><button mat-raised-button color="basic" [routerLink]="['']">Back</button>
 </div>

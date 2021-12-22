@@ -54,7 +54,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
     this.dataService.getActuel().toPromise().then(
       (data) =>
         {
-          if (this.dataService.typesearch === 'films'){
+          if (this.dataService.typesearch === 'movies'){
             this.films = data;
             this.tvShows = [];
           }
@@ -79,7 +79,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
     this.dataService.getTop().toPromise().then(
       (data) =>
         {
-          if (this.dataService.typesearch === 'films'){
+          if (this.dataService.typesearch === 'movies'){
             this.films = data;
             this.tvShows = [];
           }
@@ -93,7 +93,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
 
   /*Fonctions permettant d'effectuer un tri de données*/
   public changeOrderAscTitle() {
-    if (this.dataService.typesearch === 'films'){
+    if (this.dataService.typesearch === 'movies'){
       this.films.sort((a: { title: string; },b: { title: string; }) => a.title < b.title ? -1 :1);
     }
     else {
@@ -102,7 +102,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
   }
 
   public changeOrderAscDate() {
-    if (this.dataService.typesearch === 'films'){
+    if (this.dataService.typesearch === 'movies'){
       this.films.sort((a: { release_date: string; },b: { release_date: string; }) => a.release_date < b.release_date ? -1 :1);
     }
     else {
@@ -111,7 +111,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
   }
 
   public changeOrderDescTitle() {
-    if (this.dataService.typesearch === 'films'){
+    if (this.dataService.typesearch === 'movies'){
       this.films.sort((a: { title: string; },b: { title: string; }) => a.title > b.title ? -1 :1);
     }
     else {
@@ -120,7 +120,7 @@ export class AffichageTemplateComponent implements OnInit,OnDestroy {
   }
 
   public changeOrderDescDate() {
-    if (this.dataService.typesearch === 'films'){
+    if (this.dataService.typesearch === 'movies'){
       this.films.sort((a: { release_date: string; },b: { release_date: string; }) => a.release_date > b.release_date ? -1 :1);
     }
     else {

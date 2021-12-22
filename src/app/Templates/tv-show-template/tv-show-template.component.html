@@ -5,8 +5,8 @@
     </div>
     <div class="entete">
       <p id="titre">{{ tvShow.name }}</p>
-      A l'antenne à partir du : {{tvShow.first_air_date}} <br/><br/>
-      <strong>Résumé :</strong>
+      On air from : {{tvShow.first_air_date}} <br/><br/>
+      <strong>Overview :</strong>
       {{ tvShow.overview.substring(0,150) }}...<br/>
       <ng-content></ng-content>
     </div>

@@ -13,7 +13,7 @@ export class DataService {
   url:string='';
 
   //film value observable
-  typesearch:string='films';
+  typesearch:string='movies';
   typesearchAsObservable = new Subject<string>();
   typesearchObservable:Observable<string>= this.typesearchAsObservable.asObservable();
 
@@ -35,7 +35,7 @@ export class DataService {
 
   //permet de récupérer les films ou tvShows (en fonction de typeSearch) actuels à partir d'un lien api
   getActuel(): Observable<any> {
-    if(this.typesearch === 'films'){
+    if(this.typesearch === 'movies'){
       this.url= this.createUrl(environment.urlMovie.url,'now_playing?');
     }
     else{
@@ -57,7 +57,7 @@ export class DataService {
 
   //permet de récupérer les films ou tvShows (en fonction de typeSearch) tendances à partir d'un lien api
   getTop(): Observable<any> {
-    if(this.typesearch === 'films'){
+    if(this.typesearch === 'movies'){
       this.url= this.createUrl(environment.urlMovie.url,'popular?');
     }
     else{
