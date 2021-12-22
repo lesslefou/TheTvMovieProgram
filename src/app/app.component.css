@@ -1,0 +1,54 @@
+/*container*/
+.container-app{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.headerDiv {
+  position: fixed;
+  height: 10%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.espace {
+  height: 10vh;
+  width: 100%;
+}
+
+
+/* style */
+.scrollDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.router {
+  margin-right: 35vh;
+  margin-left: 35vh;
+
+}
+
+.footer{
+  width:100%;
+}
+
+
+
+@media (max-width: 800px){
+  .router{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .scrollDiv {
+    align-items: normal;
+  }
+}
+

@@ -1,0 +1,15 @@
+<li class="filmItem" >
+  <div class="part1">
+    <div class="divImg" [routerLink]="['/film', film.id.toString().concat('1')]">
+      <img class="img" [src]="imageShow" />
+    </div>
+    <div class="entete">
+      <p id="titre">{{ film.title }}</p>
+      <p><u>Sortie</u>&nbsp;:&nbsp;{{film.release_date}}<br/></p>
+      <strong>Résumé :</strong>
+      {{ film.overview.substring(0,150) }}...<br/>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</li>
+

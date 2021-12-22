@@ -1,0 +1,31 @@
+<div class="container-header">
+  <img id="logo" [src]="'assets/logo.png'"/>
+
+  <div class="middleColumn">
+    <div class="searchBar">
+      <img [src]="'assets/search_icon.png'" width="15erm" height="30erm"/>&nbsp;&nbsp;
+      <input  id="research" [(ngModel)]="propositions"  placeholder="Rechercher des films, tv shows">
+      <button mat-raised-button color="basic" (click)="research()">ok</button>
+    </div>
+
+    <div class='changeTime'>
+      <div id='timeButton'>&#9776;</div>
+      <ul class="timeSearch">
+        <li routerLink="/">{{typeSearch ? 'A L AFFICHE' : 'EN CE MOMENT'}}</li>&nbsp;
+        <li routerLink="futurPage"   *ngIf="typeSearch">BIENTOT</li>&nbsp;
+        <li routerLink="topPage">TOP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="changeType">
+    <div id='typeButton'>
+      <p>* {{this.dataService.typesearch | uppercase}}</p>
+    </div>
+    <div class="typeSearch">
+      <li><a (click)="changeFilmOrtvShow('films')" (click)="typeSearch = true">Films</a></li>
+      <li><a (click)="changeFilmOrtvShow('tvShows')" (click)="typeSearch = false">TvShows</a></li>
+    </div>
+  </div>
+
+</div>

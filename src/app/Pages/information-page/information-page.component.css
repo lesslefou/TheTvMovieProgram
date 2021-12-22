@@ -1,0 +1,64 @@
+.filmInfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+}
+
+.main2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.titre {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.resume {
+  height: fit-content;
+  margin: 0;
+}
+
+.soustitre {
+  display: flex;
+  margin:0;
+  height: auto;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.ligne {
+  display: flex;
+}
+
+.texte {
+  height: 10px;
+}
+
+img{
+  width:15rem;
+}
+
+@media (max-width: 800px){
+  img{
+    width: 30%;
+  }
+  .titre{
+    font-size: 15px;
+  }
+
+  .soustitre {
+    font-size: 10px;
+  }
+
+  .texte {
+    height: 5px;
+  }
+}

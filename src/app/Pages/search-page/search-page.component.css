@@ -1,0 +1,20 @@
+* {
+  padding-inline-start: 0px;
+}
+
+.separate{
+  border-bottom: 1px solid #000;
+  width: 700px;
+}
+
+.titre {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+@media (max-width: 800px){
+  .separate{
+    width: 100%;
+  }
+}

@@ -1,0 +1,86 @@
+* {
+  padding-inline-start: 0px;
+}
+
+.separate{
+  border-bottom: 1px solid #000;
+  width: 700px;
+}
+
+ul {
+  list-style: none;
+}
+
+.triFilm {
+  display: flex;
+  height: 45px;
+}
+.triFilm:hover {
+  cursor: pointer;
+}
+
+#triName {
+  display: flex;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(204, 201, 201);
+  padding: 5px;
+  border-radius: 5px;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+}
+#triName p{
+  margin:auto;
+  text-align: center;
+}
+
+li:hover {
+  background: red;
+  cursor: pointer;
+}
+
+.triButton{
+  display: flex;
+  height: 45px;
+  background-color: rgb(204, 201, 201);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin: 0;
+}
+.triButton li {
+  clear: both;
+  width: fit-content;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 13px;
+}
+
+.triFilm:hover > ul,
+.triButton:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+@media (max-width: 800px){
+  .separate{
+    width: 100%;
+  }
+  p {
+    font-size: 15px;
+  }
+  li {
+    font-size: 15px;
+  }
+
+  @media (max-width : 600px){
+    p {
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<li class="tvShowItem" >
+  <div class="part1">
+    <div class="divImg" [routerLink]="['/tvShow', tvShow.id.toString().concat('2')]">
+      <img class="img" [src]="imageShow" />
+    </div>
+    <div class="entete">
+      <p id="titre">{{ tvShow.name }}</p>
+      A l'antenne à partir du : {{tvShow.first_air_date}} <br/><br/>
+      <strong>Résumé :</strong>
+      {{ tvShow.overview.substring(0,150) }}...<br/>
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+</li>
+

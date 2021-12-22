@@ -1,0 +1,25 @@
+<div class="component bg">
+  <ul>
+    <p class ="titre">FILMS : </p>
+    <ng-container *ngIf='films && films.length > 0'>
+      <div class='separate' *ngFor='let film of films'>
+          <app-film-template [film]='film'></app-film-template>
+      </div>
+    </ng-container>
+    <ng-container *ngIf='films && films.length <= 0'>
+        Pas d'élément !!!
+    </ng-container>
+
+    <br/><br/>
+
+    <p class ="titre">TV SHOWS : </p>
+    <ng-container *ngIf='tvShows && tvShows.length > 0'>
+      <div class='separate' *ngFor='let tvShow of tvShows'>
+          <app-tv-show-template [tvShow]='tvShow'></app-tv-show-template>
+      </div>
+    </ng-container>
+    <ng-container *ngIf='tvShows && tvShows.length <= 0'>
+        Pas d'élément !!!
+    </ng-container>
+  </ul>
+</div>
