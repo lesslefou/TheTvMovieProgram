@@ -1,5 +1,4 @@
 <div class="filmInfo" >
-
   <div class="main">
     <img [src]="imageShow" />
 
@@ -43,12 +42,12 @@
   <p class="resume">{{ dataToShow.overview }}</p>
 
   <br/>
-  <div *ngIf="reviewToShow.total_results !== 0">
-    <p class="soustitre">user opinions</p>
+  <div class="opinions" *ngIf="reviewToShow.total_results !== 0">
+    <p class="soustitre">User Opinions</p>
     <p class="texte" *ngFor="let review of reviewToShow.results">
       <strong>{{review.author}}</strong> ({{review.created_at.substring(0,10)}}) : <br/>
       {{review.content.substring(0,150)}}... <br/>
-      <u>{{review.url}}</u><br/><br/>
+      <a target="_blank" [href]="review.url">{{review.url}}</a>
     </p>
   </div>
 

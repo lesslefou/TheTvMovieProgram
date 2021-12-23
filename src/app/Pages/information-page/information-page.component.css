@@ -1,7 +1,13 @@
+* {
+  padding-inline-start: 0px;
+}
+
+
 .filmInfo{
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  background-color: white;
 }
 
 .main{
@@ -23,6 +29,17 @@
 .resume {
   height: fit-content;
   margin: 0;
+}
+.opinions{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.opinions .soustitre ~ .texte{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .soustitre {

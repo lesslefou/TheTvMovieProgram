@@ -45,7 +45,7 @@ export class InformationPageComponent implements OnInit,OnDestroy {
           },
           (err) => {
             this.imageLoad=false;
-            console.error(err);
+            console.error('InformationPageComponent',err);
           });
         }
     );

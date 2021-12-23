@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
+## Description
+TheTvMovieProgram est un site internet réactif (il s'adapte d'un écran de téléphone à un ordinateur). 
+Il diffuse grâce à l'api TheMovieDB, la liste des films à l'affiche, qui sortiront bientôt et les mieux notés. Mais également la liste des TVShows à l'écran et les mieux notés également. (L'api n'étant pas très à jour, vous trouverez des films à la fois dans actuel et bientôt...)
+
+Pour switcher entre films et tvShows, il suffit de cliquer sur le bouton en haut à droite et un menu déroulant vous permettra d'effectuer votre choix (menu-déroulant pour un possible ajout d'autre type de données à afficher). 
+Sur chaque film proposé vous pouvez avoir accès à une plus grande description en cliquant sur l'image. 
+Vous pourrez également trier l'apparition des propositions via leur titre (asc/desc) et leur date de sortie (asc/decs) en cliquant sur le bouton trier par : (menu déroulant)
+
+Une barre de recherche est mise à votre disposition afin de trouver la liste des films et tvShows contenant votre titre.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
